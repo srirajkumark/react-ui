@@ -1,0 +1,26 @@
+
+
+Components:
+-> class based (legacy)
+-> function based (new) 16.0 ++
+
+
+
+<div className="App">
+   <h2>Welcome to App Component</h2>
+</div>
+
+React own templating language -> 99% html -> 1% diff
+
+Diff:
+1. class -> classname
+2. every tag must contains a closing tag.
+
+React JS Props & State:-
+======================
+
+Props -> Transfer data from one component to another component.
+
+<img src="">
+
+State -> The data itself can be maintained by the component.
