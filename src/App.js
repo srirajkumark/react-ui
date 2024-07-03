@@ -10,7 +10,7 @@ let App = () => {
         <span>Welcome to App Component</span>
       </nav>
       <Employee name ="Raj" age={25}/>
-      <Employee/>
+      <Employee name ="Kumar" age={30}/>
     </Fragment>
     
   );

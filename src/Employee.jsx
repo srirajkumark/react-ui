@@ -7,12 +7,13 @@ class Employee extends React.Component {
     }
 
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <React.Fragment>
                 <div className="card">
                     <div className="card-body">
-                        <h2>Welcome John</h2>
+                        <h2>Welcome {this.props.name}</h2>
+                        <h3>Age : {this.props.age} years</h3>
                     </div>
                 </div>
             </React.Fragment>
