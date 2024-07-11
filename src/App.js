@@ -1,6 +1,7 @@
 import React, { Fragment} from 'react';
 import './App.css';
-import Employee from './components/Employee';
+// import Employee from './components/Employee';
+import Student from './components/student';
 
 
 
@@ -10,7 +11,8 @@ let App = () => {
       <nav className="navbar">
         <span>Welcome to App Component</span>
       </nav>
-      <Employee/>
+      {/* <Employee/> */}
+      <Student/>
     </Fragment>
     
   );
