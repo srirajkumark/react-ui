@@ -27,3 +27,15 @@ State -> The data itself can be maintained by the component.
 
 
 React JS Expression -> {}
+
+React Hooks
+------------
+=> a special function of a component
+
+-> useState()
+
+let [state, setState] = useState({
+   .....
+});
+
+let student = {name : 'John', course : 'BTech'};
