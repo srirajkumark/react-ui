@@ -39,3 +39,15 @@ let [state, setState] = useState({
 });
 
 let student = {name : 'John', course : 'BTech'};
+
+Bootstrap Installations:
+npm install bootstrap@5.3.3
+-> .css , .js
+
+font-Awesome icons:
+npm i font-awesome
+https://use.fontawesome.com/releases/v6.5.2/css/all.css
+-> .css 
+
+google fonts:
+Ubuntu font
