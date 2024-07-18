@@ -4,8 +4,21 @@ import React, { useState } from "react";
 let Counter = () => {
 
     let [state, setState] = useState({
-        count : 7
+        count : 0
     });
+
+    // setState is not a pre defined one, we can use any name
+    let incrCounter = () => {
+        setState((state) => ({
+            count : state.count + 1
+        }));
+    };
+
+    let decrCounter = () => {
+        setState((state) => ({
+            count : state.count - 1
+        }));
+    };
 
     return(
         <React.Fragment>
@@ -18,8 +31,8 @@ let Counter = () => {
                             </div>
                             <div className="card-body">
                                 <h5 className="display-3">{state.count}</h5>
-                                <button className="btn btn-success btn-sm">Increment</button>
-                                <button className="btn btn-warning btn-sm">Decrement</button>
+                                <button onClick={incrCounter} className="btn btn-success btn-sm">Increment</button>
+                                <button onClick={decrCounter} className="btn btn-warning btn-sm">Decrement</button>
                             </div>
                         </div>
                     </div>
