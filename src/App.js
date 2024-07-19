@@ -1,8 +1,8 @@
 import React, { Fragment} from 'react';
 import './App.css';
+import ShoppingCart from './components/ShoppingCart';
 
-import ProductItem from './components/ProductItem';
-
+// import ProductItem from './components/ProductItem';
 // import WishMessage from './components/WishMessage';
 // import Counter from './components/Counter';
 
@@ -18,7 +18,8 @@ let App = () => {
       </nav>
       {/* <Counter/> */}
       {/* <WishMessage/> */}
-      <ProductItem/>
+      {/* <ProductItem/> */}
+      <ShoppingCart/>
     </Fragment>
     
   );
