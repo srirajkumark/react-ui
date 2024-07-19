@@ -1,6 +1,9 @@
 import React, { Fragment} from 'react';
 import './App.css';
-import WishMessage from './components/WishMessage';
+
+import ProductItem from './components/ProductItem';
+
+// import WishMessage from './components/WishMessage';
 // import Counter from './components/Counter';
 
 
@@ -14,7 +17,8 @@ let App = () => {
         <a href="/" className='navbar-brand'>React with Events Handling</a>
       </nav>
       {/* <Counter/> */}
-      <WishMessage/>
+      {/* <WishMessage/> */}
+      <ProductItem/>
     </Fragment>
     
   );
