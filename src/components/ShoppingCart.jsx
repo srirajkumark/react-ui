@@ -45,6 +45,50 @@ let ShoppingCart = () => {
 
     let {products} = state;
 
+    let incrQty = (productId) => {
+        // filter the data for updating qty
+        let items = products.map(product => {
+            if(product.sno === productId){
+                return {
+                    ...product,
+                    qty : product.qty + 1
+                }
+            }
+            return product;
+        });
+
+        // update the state with new data
+        setState(() => ({
+            products: [...items]
+        }));
+    };
+
+    let decrQty = (productId) => {
+        // filter the data for updating qty
+        let items = products.map(product => {
+            if(product.sno === productId){
+                return {
+                    ...product,
+                    qty : product.qty - 1 > 0 ? product.qty - 1 : 1
+                }
+            }
+            return product;
+        });
+
+        // update the state with new data
+        setState(() => ({
+            products: [...items]
+        }));
+    };
+
+    let grandTotal = () => {
+        let total = 0;
+        for(let product of products){
+            total += product.price * product.qty;
+        }
+        return total;
+    };
+
 
     return(
         <React.Fragment>
@@ -80,17 +124,22 @@ let ShoppingCart = () => {
                                                     <img src={product.image} alt="" width={40} height={40}/>
                                                 </td>
                                                 <td>{product.name}</td>
-                                                <td>{product.price}</td>
+                                                <td>&#8377;{product.price.toFixed(2)}</td>
                                                 <td>
-                                                    <i className="fa fa-minus-square mx-1"></i>
+                                                    <i onClick={() => decrQty(product.sno)} className="fa fa-minus-square mx-1"></i>
                                                         {product.qty}
-                                                    <i className="fa fa-plus-square mx-1"></i>
+                                                    <i onClick={() => incrQty(product.sno)} className="fa fa-plus-square mx-1"></i>
                                                 </td>
-                                                <td>{product.qty * product.price}</td>
+                                                <td>&#8377;{(product.qty * product.price).toFixed(2)}</td>
                                             </tr>
                                         )
                                     })
                                 }
+                                <tr className="text-end">
+                                    <td colSpan={4}></td>
+                                    <td>Grand Total : </td>
+                                    <td>&#8377;{grandTotal().toFixed(2)}</td>
+                                </tr>
                                 
                             </tbody>
                         </table>
