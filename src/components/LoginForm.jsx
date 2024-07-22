@@ -12,20 +12,11 @@ let LoginForm = () => {
 
     let {user} = state;
 
-    let ChangeUserName = (event) => {
+    let ChangeInput = (event) => {
         setState((state) => ({
             user : {
                 ...state.user,
-                username: event.target.value
-            }
-        }));
-    };
-
-    let ChangePassword = (event) => {
-        setState((state) => ({
-            user : {
-                ...state.user,
-                password: event.target.value
+                [event.target.name]: event.target.value
             }
         }));
     };
@@ -49,15 +40,17 @@ let LoginForm = () => {
                             <div className="card-body bg-light">
                                 <form onSubmit={SubmitLogin}>
                                     <div className="mb-3">
-                                        <input 
+                                        <input
+                                            name="username" 
                                             value={user.username}
-                                            onChange={ChangeUserName}
+                                            onChange={ChangeInput}
                                             type="text" className="form-control" placeholder="User Name"/>
                                     </div>
                                     <div className="mb-3">
                                         <input 
+                                            name="password"
                                             value={user.password}
-                                            onChange={ChangePassword}
+                                            onChange={ChangeInput}
                                             type="password" className="form-control" placeholder="Password"/>
                                     </div>
                                     <div className="mb-3">
