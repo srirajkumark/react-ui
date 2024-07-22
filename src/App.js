@@ -1,6 +1,7 @@
 import React, { Fragment} from 'react';
 import './App.css';
 import UserName from './components/UserName';
+import LoginForm from './components/LoginForm';
 
 
 
@@ -10,7 +11,8 @@ let App = () => {
       <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
         <a href="/" className='navbar-brand'>React with Forms Handling</a>
       </nav>
-      <UserName/>
+      {/* <UserName/> */}
+      <LoginForm/>
     </Fragment>
     
   );
