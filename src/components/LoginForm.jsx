@@ -17,6 +17,7 @@ let LoginForm = () => {
             user : {
                 ...state.user,
                 [event.target.name]: event.target.value
+                // By using event.target we can achieve this optimised form.
             }
         }));
     };
