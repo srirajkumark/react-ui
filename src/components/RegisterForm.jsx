@@ -41,6 +41,7 @@ let RegisterForm = () => {
                                     <div className="mb-3">
                                         <input type="submit" className="btn btn-warning btn-sm" value="Register" />
                                     </div>
+                                    {/*Register Form with Details */}
                                 </form>
                             </div>
                         </div>
