@@ -1,9 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 let RegisterForm = () => {
+
+    let [state, setState] = useState({
+        user : {
+            username : '',
+            email : '',
+            password : '',
+            designation : '',
+            bio : '',
+            terms : false
+        }
+    });
+
+    let {user} = state;
+
+    let updateInput = (event) => {
+        setState((state) => ({
+            user : {
+                ...state.user,
+                [event.target.name] : event.target.value
+            }
+        }));
+    };
+
+    let updateCheck = (event) => {
+        setState((state) => ({
+            user : {
+                ...state.user,
+                [event.target.name] : event.target.checked
+            }
+        }));
+    };
+
+    let submitRegister = (event) => {
+        event.preventDefault();
+        console.log(user);
+    };
+
+
     return(
         <React.Fragment>
+            {/* <pre>{JSON.stringify(state.user)}</pre> */}
             <div className="container mt-3">
                 <div className="row">
                     <div className="col-md-4">
@@ -12,18 +51,34 @@ let RegisterForm = () => {
                                 <p className="h4">Register Here</p>
                             </div>
                             <div className="card-body bg-light">
-                                <form>
+                                <form onSubmit={submitRegister}>
                                     <div className="mb-3">
-                                        <input type="text" className="form-control" placeholder="User Name" />
+                                        <input 
+                                            name = "username"
+                                            value={user.username}
+                                            onChange={updateInput}
+                                            type="text" className="form-control" placeholder="User Name" />
                                     </div>
                                     <div className="mb-3">
-                                        <input type="email" className="form-control" placeholder="Email" />
+                                        <input 
+                                            name = "email"
+                                            value={user.email}
+                                            onChange={updateInput}
+                                            type="email" className="form-control" placeholder="Email" />
                                     </div>
                                     <div className="mb-3">
-                                        <input type="password" className="form-control" placeholder="Password" />
+                                        <input 
+                                            name = "password"
+                                            value={user.password}
+                                            onChange={updateInput}
+                                            type="password" className="form-control" placeholder="Password" />
                                     </div>
                                     <div className="mb-3">
-                                        <select className="form-control">
+                                        <select 
+                                            name = "designation"
+                                            value={user.designation}
+                                            onChange={updateInput}
+                                            className="form-control">
                                             <option value="">Select Designation</option>
                                             <option value="Software Engineer">Software Engineer</option>
                                             <option value="Sr.Software Engineer">Sr.Software Engineer</option>
@@ -33,15 +88,21 @@ let RegisterForm = () => {
                                         </select>
                                     </div>
                                     <div className="mb-3">
-                                        <textarea rows={4} className="form-control" placeholder="Bio"></textarea>
+                                        <textarea 
+                                            name = "bio"
+                                            value={user.bio}
+                                            onChange={updateInput}
+                                            rows={4} className="form-control" placeholder="Bio"></textarea>
                                     </div>
                                     <div className="mb-3">
-                                        <input type="checkbox" className="form-check-input"/> Accept Terms
+                                        <input 
+                                            name = "terms"
+                                            onChange={updateCheck}
+                                            type="checkbox" className="form-check-input"/> Accept Terms
                                     </div>
                                     <div className="mb-3">
                                         <input type="submit" className="btn btn-warning btn-sm" value="Register" />
                                     </div>
-                                    {/*Register Form with Details */}
                                 </form>
                             </div>
                         </div>
