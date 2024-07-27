@@ -5,8 +5,16 @@ import ChildComponent from "./ChildComponent";
 let ParentComponent = () => {
 
     let [state, setState] = useState({
-        channel : 'Sri Raj Tech'
+        channel : 'Sri Raj Tech',
+        author : ''
     });
+
+    let receiveData = (data) => {
+        setState((state) => ({
+            ...state,
+            author : data
+        }));
+    };
 
     return(
         <React.Fragment>
@@ -16,7 +24,8 @@ let ParentComponent = () => {
                         <div className="card shadow-lg">
                             <div className="card-body bg-success text-white">
                                 <p className="h4">Parent Component</p>
-                                <ChildComponent channel={state.channel}/>
+                                <p>From Child : {state.author}</p>
+                                <ChildComponent channel={state.channel} sendData={receiveData}/>
                             </div>
                         </div>
                     </div>
