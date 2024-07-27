@@ -1,7 +1,6 @@
 import React, { Fragment} from 'react';
 import './App.css';
-import AuthUser from './components/AuthUser';
-import ProductCart from './components/ProductCart';
+import ParentComponent from './components/basics/ParentComponent';
 
 
 
@@ -9,10 +8,9 @@ let App = () => {
   return (
     <Fragment>
       <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
-        <a href="/" className='navbar-brand'>React with Conditional & List Rendering</a>
+        <a href="/" className='navbar-brand'>React with Component Interaction</a>
       </nav>
-      {/* <AuthUser/> */}
-      <ProductCart/>
+      <ParentComponent/>
     </Fragment>
     
   );
