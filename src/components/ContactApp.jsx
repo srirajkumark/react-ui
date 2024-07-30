@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import ContactList from "./ContactList";
 import ContactCard from "./ContactCard";
 
 
 let ContactApp = () => {
+
+    let [state, setState] = useState({
+        selectedContact : {}
+    });
+
+    let {selectedContact} = state;
+
+    let receiveContact = (contact) => {
+        setState((state) => ({
+            selectedContact : contact
+        }));
+    };
+
+
     return(
         <React.Fragment>
+            {/* <pre>{JSON.stringify(selectedContact)}</pre> */}
             <div className="container mt-3">
                 <div className="row">
                     <div className="col">
@@ -17,10 +32,10 @@ let ContactApp = () => {
             <div className="container mt-3">
                 <div className="row">
                     <div className="col-md-9">
-                        <ContactList/>
+                        <ContactList sendContact={receiveContact}/>
                     </div>
                     <div className="col-md-3">
-                        <ContactCard/>
+                        <ContactCard selectedContact={selectedContact}/>
                     </div>
                 </div>
             </div>
