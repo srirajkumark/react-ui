@@ -1238,3 +1238,5 @@ class ContactService {
         return this.contactList;
       }
 }
+
+export default ContactService
