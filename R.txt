@@ -62,3 +62,15 @@ https://gist.githubusercontent.com/thenaveensaggam/fe5a67531d964f8c17fc92f0c70ce
 componentDidMount() -> rendered on DOM
 componentWillUpdate() -> updates
 componentWillUnmount() -> removes comp from DOM
+
+hooks:
+
+useState()
+useEffect()
+
+useEffect(() => {
+   //componentDidMount() //server connection logic
+   return () => {
+      //componentWillUnmount()
+   }
+},[]);
