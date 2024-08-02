@@ -1,9 +1,10 @@
-import { Axios } from "axios";
+import axios from "axios";
 
 class UserService {
 
     static getAllusers(){
-        let serverURL = 'https://jsonplaceholder.typicode.com/users';
-        return Axios.get(serverURL);
+        const serverURL = 'https://jsonplaceholder.typicode.com/users';
+        return axios.get(serverURL);
     }
 }
+export default UserService;
