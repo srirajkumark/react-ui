@@ -9,14 +9,36 @@ let UserList = () => {
     });
 
     useEffect(() => {
-        UserService.getAllusers().then((response) => {
-            setState(() => ({
-                users : response.data
-            }));
-        }).catch((error) => {
-            console.log(error);
-        });
-    },[]);
+        // *********Promises Model (Old)**********
+        // UserService.getAllusers().then((response) => {
+        //     setState(() => ({
+        //         users : response.data
+        //     }));
+        // }).catch((error) => {
+        //     console.log(error);
+        // });
+
+        // ***********Async Await Model (New)*************
+        const fetchData = async () => {
+            let response = {};
+            try {
+                response = await UserService.getAllusers();
+                setState(() => ({
+                    users: response.data
+                }));
+            }
+            catch (error) {
+                console.log(error);
+            }
+
+            // Component will unmount
+            return () => {
+                response = null;
+            };
+        };
+        fetchData();
+
+    }, []);
 
     let {users} = state;
 
