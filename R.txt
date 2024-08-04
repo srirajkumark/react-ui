@@ -79,3 +79,6 @@ useEffect(() => {
 Axios library => http library
 ---------------------
 npm install axios 
+
+When using useEffect we should not write Async function directly in main function 
+As useEffect should not return a promise, you need to define the async function inside the useEffect and call it immediately.
