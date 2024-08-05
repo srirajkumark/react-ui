@@ -83,3 +83,7 @@ npm install axios
 When using useEffect we should not write Async function directly in main function 
 As useEffect should not return a promise, you need to define the async function inside the useEffect and call it immediately.
 Contact App Using Http Axios 
+Changes Made in User List:
+Moved the async function inside useEffect: The fetchData async function is defined inside the useEffect hook and called immediately after its definition.
+Removed async from useEffect callback: The useEffect callback is no longer async, preventing the issue where useEffect would return a promise.
+This ensures the useEffect hook remains synchronous and functions correctly.
