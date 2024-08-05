@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactService from "../services/ContactService";
 
 
 let ContactList = (props) => {
 
     let [state, setState] = useState({
-        contacts : ContactService.getContactList()
+        contacts : []
     });
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                let response = await ContactService.getContactList();
+                setState(() => ({
+                    contacts: response.data
+                }));
+            }
+            catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
+
+    }, []);
 
     let {contacts} = state;
 
