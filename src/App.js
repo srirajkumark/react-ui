@@ -1,13 +1,16 @@
 import React, { Fragment} from 'react';
 import './App.css';
-
+import { BrowserRouter, Router, Switch } from 'react-router-dom';
 
 let App = () => {
   return (
     <Fragment>
-      <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
-        <a href="/" className='navbar-brand'>React with Routing & Navigation</a>
-      </nav>
+      <BrowserRouter>
+          <NavBar/>
+          <Switch>
+            
+          </Switch>
+      </BrowserRouter>
     </Fragment>
     
   );

@@ -92,3 +92,15 @@ This ensures the useEffect hook remains synchronous and functions correctly.
 React Routing & Navigation
 --------------------------
 npm install react-router-dom
+
+/users -> users page
+/admin -> admin page 
+/login -> login page 
+
+In this project for routing :
+/                 -> home page
+/employees/list   -> employees list page
+/about            -> about page 
+/users/login      -> login page 
+/users/register   -> register page 
+
