@@ -104,3 +104,13 @@ In this project for routing :
 /users/login      -> login page 
 /users/register   -> register page 
 
+
+New way to use router:
+Open up your terminal and bootstrap a new React app with Vite:
+
+npm create vite@latest name-of-your-project -- --template react
+# follow prompts
+cd <your new project directory>
+npm install react-router-dom # always need this!
+npm install localforage match-sorter sort-by # only for this tutorial.
+npm run dev
