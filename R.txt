@@ -114,3 +114,6 @@ cd <your new project directory>
 npm install react-router-dom # always need this!
 npm install localforage match-sorter sort-by # only for this tutorial.
 npm run dev
+
+React Contact Manager Application:
+To setup a phone directory.
