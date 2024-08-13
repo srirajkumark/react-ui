@@ -117,3 +117,4 @@ npm run dev
 
 To build react project with more examples.
 React Contact Manager App: CRUD
+npx create-react-app <app-name>
