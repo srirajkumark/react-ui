@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+## Covered Basic to Advanced concepts in React with examples.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
