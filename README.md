@@ -1,8 +1,19 @@
-# Getting Started with Create React App
+# React with JavaScript
 
-## Covered Basic to Advanced concepts in React with examples.
+In this we mainly covered the main concepts related to React using JavaScript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## List of Concepts
+
+In the project directory, you can find:
+
+### 1. React Project Initialization
+
+### 2. Create React App Setup
+
+### 3. ....
+
+
+#### =========================================
 
 ## Available Scripts
 
