@@ -10,9 +10,9 @@ In the project directory, you can find:
 
 ### 2. Create React App Setup
 
-### 3. ....
+### 3. Functional Components with Props
 
-
+### 4. State Management in Class Based Components
 #### =========================================
 
 ## Available Scripts
