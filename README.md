@@ -13,6 +13,13 @@ In the project directory, you can find:
 ### 3. Functional Components with Props
 
 ### 4. State Management in Class Based Components
+
+### 5. State Management in Functional Component
+
+### 6. Bootstrap Configuration
+
+### 7. Event Handling with React Counter
+
 #### =========================================
 
 ## Available Scripts
