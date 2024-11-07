@@ -20,6 +20,18 @@ In the project directory, you can find:
 
 ### 7. Event Handling with React Counter
 
+### 8. Event Handling with React Wish Message
+
+### 9. Events Handling with React Product Item
+
+### 10. Events Handling with React Shopping Cart
+
+### 11. Two way binding in React
+
+### 12. Login Form Setup
+
+### 13. Login Form Optimised
+
 #### =========================================
 
 ## Available Scripts
