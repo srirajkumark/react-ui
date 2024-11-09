@@ -32,6 +32,10 @@ In the project directory, you can find:
 
 ### 13. Login Form Optimised
 
+### 14. Register Form Layout
+
+### 15. Form Handling with Registration Form
+
 #### =========================================
 
 ## Available Scripts
