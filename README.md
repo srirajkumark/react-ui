@@ -36,6 +36,16 @@ In the project directory, you can find:
 
 ### 15. Form Handling with Registration Form
 
+### 16. Conditional Rendering
+
+### 17. List Rendering
+
+### 18. List Rendering in Product Cart
+
+### 19. Introduction to Services
+
+### 
+
 #### =========================================
 
 ## Available Scripts
